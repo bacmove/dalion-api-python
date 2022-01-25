@@ -48,6 +48,7 @@ if len(sys.argv) != 6:
     3) Channel
     """
     valc = input(a)
+    valc = int(valc)
 
     ## Input - Lamp or group index
     if valc == 1:
@@ -68,6 +69,8 @@ else:
     valii = sys.argv[4]
     valv  = sys.argv[5]
 
+    valc = int(valc)
+
 # Prepare the URL
 
 ## Parameter - IP
@@ -80,10 +83,10 @@ url += "/api/v100/dali_devices.ssi?action=set_device"
 url += "&ch=" + valch
 
 ## Parameter - Lamp index, group index or channel
-if int(valc) == 1:
+if valc == 1:
     # Lamp index
     url += "&di=" + valii
-elif int(valc) == 2:
+elif valc == 2:
     # Group index
     url += "&gi=" + valii
 else:
