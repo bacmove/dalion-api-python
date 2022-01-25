@@ -18,8 +18,8 @@ import json
 # IP: The DALION IP address.
 # channel: The channel number, 1-4. 
 # destination: 1 = lamp, 2 = group, 3 = channel.
-# destination-index: lamp index 0-63, group index 0-15 or channel -1.
-# value: the light intensity value in percent.
+# destination-index: Lamp index 0-63, group index 0-15 or channel -1.
+# value: The light intensity value in percent.
 #
 # Exemple: 
 # Set light intensity to 10% for the channel 1.
