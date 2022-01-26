@@ -31,7 +31,6 @@ dalion-api-get-device.py 192.168.0.210 1 1 1 dvgr
 
 Get the fade time of the lamp 0 on the channel 1.
 dalion-api-get-device.py 192.168.0.210 1 1 0 dvft
-#
 """
 
 import sys
