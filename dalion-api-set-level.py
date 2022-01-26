@@ -15,7 +15,7 @@ import json
 # Usage - Command line arguments
 # dalion-api-set-level.py IP channel destination destination-index value
 #
-# IP: The DALION IP address.
+# ip: The DALION IP address.
 # channel: The channel number, 1-4. 
 # destination: 1 = lamp, 2 = group, 3 = channel.
 # destination-index: Lamp index 0-63, group index 0-15 or channel -1.
@@ -53,10 +53,10 @@ if len(sys.argv) != 6:
     ## Input - Lamp or group index
     if valc == 1:
         # Input - Lamp index
-        valii = input("Enter lamp index: ")
+        valii = input("Enter lamp index (0-63): ")
     elif valc == 2:
         # Input - Group index
-        valii = input("Enter group index: ")    
+        valii = input("Enter group index (0-15): ")    
 
     # Input - Value in percent
     valv = input("Enter light intensity in percent %: ")
