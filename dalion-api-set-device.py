@@ -175,7 +175,7 @@ if len(sys.argv) != 7:
     # Input - Value
     valv = input("Enter the value for " + variable['tx'] + ": ")
 else:
-    # Command line argument
+    # Command line arguments
 
     # ip
     valip = sys.argv[1]

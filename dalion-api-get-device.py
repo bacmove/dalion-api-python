@@ -163,7 +163,7 @@ if len(sys.argv) != 6:
     variable = device_variables.device_variables[valvi]
     valid = variable['id']
 else:
-    # Command line argument
+    # Command line arguments
 
     # ip
     valip = sys.argv[1]

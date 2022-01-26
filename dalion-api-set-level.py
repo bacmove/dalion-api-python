@@ -61,7 +61,7 @@ if len(sys.argv) != 6:
     # Input - Value in percent
     valv = input("Enter light intensity in percent %: ")
 else:
-    # Command line argument
+    # Command line arguments
 
     valip = sys.argv[1]
     valch = sys.argv[2]
