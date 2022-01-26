@@ -1,3 +1,7 @@
+"""
+List of the device variables.
+"""
+
 
 device_variables = [
 {
