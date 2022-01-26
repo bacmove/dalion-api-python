@@ -1,36 +1,38 @@
+"""
+dalion-api-set-level.py
+
+Allows modifying the light intensity of a lamp, group or channel.
+The parameters can be passed via command line arguments or via user input.
+
+Usage - User input
+dalion-api-set-level.py
+
+Usage - Command line arguments
+dalion-api-set-level.py IP channel destination destination-index value
+
+ip: The DALION IP address.
+channel: The channel number, 1-4.
+destination: 1 = lamp, 2 = group, 3 = channel.
+destination-index: Lamp index 0-63, group index 0-15 or channel -1.
+value: The light intensity value in percent.
+
+Exemples:
+Set light intensity to 10% for the channel 1.
+dalion-api-set-level.py 192.168.0.210 1 3 -1 100
+
+Set light intensity to 90% for the group 2 on the channel 1.
+dalion-api-set-level.py 192.168.0.210 1 2 2 900
+
+Set light intensity to 0% for the lamp 0 on the channel 1.
+dalion-api-set-level.py 192.168.0.210 1 1 0 0
+"""
+
+
 import sys
 import urllib.request
 import urllib.parse
 import json
 
-#
-# dalion-api-set-level.py
-#
-# Allows modifying the light intensity of a lamp, group or channel.
-# The parameters can be passed via command line arguments or via user input.
-#
-# Usage - User input
-# dalion-api-set-level.py
-#
-# Usage - Command line arguments
-# dalion-api-set-level.py IP channel destination destination-index value
-#
-# ip: The DALION IP address.
-# channel: The channel number, 1-4. 
-# destination: 1 = lamp, 2 = group, 3 = channel.
-# destination-index: Lamp index 0-63, group index 0-15 or channel -1.
-# value: The light intensity value in percent.
-#
-# Exemple: 
-# Set light intensity to 10% for the channel 1.
-# dalion-api-set-level.py 192.168.0.210 1 3 -1 100
-#
-# Set light intensity to 90% for the group 2 on the channel 1.
-# dalion-api-set-level.py 192.168.0.210 1 2 2 900
-#
-# Set light intensity to 0% for the lamp 0 on the channel 1.
-# dalion-api-set-level.py 192.168.0.210 1 1 0 0
-#
 
 if len(sys.argv) != 6:
     # User Input
@@ -42,12 +44,12 @@ if len(sys.argv) != 6:
     valch = input("Enter channel number (1-4): ")
 
     # Input - Destination (lamp, group or channel)
-    a = """Select destination: 
+    STRD = """Select destination:
     1) Lamp
     2) Group
     3) Channel
     """
-    valc = input(a)
+    valc = input(STRD)
     valc = int(valc)
 
     ## Input - Lamp or group index
@@ -56,7 +58,7 @@ if len(sys.argv) != 6:
         valii = input("Enter lamp index (0-63): ")
     elif valc == 2:
         # Input - Group index
-        valii = input("Enter group index (0-15): ")    
+        valii = input("Enter group index (0-15): ")
 
     # Input - Value in percent
     valv = input("Enter light intensity in percent %: ")
