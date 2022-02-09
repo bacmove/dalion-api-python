@@ -1,14 +1,14 @@
 """
-dalion-api-get-device.py
+dalion_api_get_device.py
 
 Allows retrieving a lamp, group or channel.
 The parameters can be passed via command line arguments or via user input.
 
 Usage - User input
-dalion-api-get-device.py
+dalion_api_get_device.py
 
 Usage - Command line arguments
-dalion-api-get-device.py ip channel destination destination-index id
+dalion_api_get_device.py ip channel destination destination-index id
 
 ip: The DALION IP address.
 channel: The channel number, 1-4.
@@ -18,19 +18,19 @@ id: The variable id.
 
 Exemples:
 Get the light intensity of the channel 1.
-dalion-api-get-device.py 192.168.0.210 1 3 -1 dval
+dalion_api_get_device.py 192.168.0.210 1 3 -1 dval
 
 Get the light intensity of the group 2 on the channel 1.
-dalion-api-get-device.py 192.168.0.210 1 2 2 dval
+dalion_api_get_device.py 192.168.0.210 1 2 2 dval
 
 Get the light intensity of the lamp 0 on the channel 1.
-dalion-api-get-device.py 192.168.0.210 1 1 0 dval
+dalion_api_get_device.py 192.168.0.210 1 1 0 dval
 
 Get the groups of the lamp 1 on the channel 1.
-dalion-api-get-device.py 192.168.0.210 1 1 1 dvgr
+dalion_api_get_device.py 192.168.0.210 1 1 1 dvgr
 
 Get the fade time of the lamp 0 on the channel 1.
-dalion-api-get-device.py 192.168.0.210 1 1 0 dvft
+dalion_api_get_device.py 192.168.0.210 1 1 0 dvft
 """
 
 import sys

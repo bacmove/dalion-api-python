@@ -1,14 +1,14 @@
 """
-dalion-api-set-level.py
+dalion_api_set_level.py
 
 Allows modifying the light intensity of a lamp, group or channel.
 The parameters can be passed via command line arguments or via user input.
 
 Usage - User input
-dalion-api-set-level.py
+dalion_api_set_level.py
 
 Usage - Command line arguments
-dalion-api-set-level.py IP channel destination destination-index value
+dalion_api_set_level.py IP channel destination destination-index value
 
 ip: The DALION IP address.
 channel: The channel number, 1-4.
@@ -18,13 +18,13 @@ value: The light intensity value in percent.
 
 Exemples:
 Set light intensity to 10% for the channel 1.
-dalion-api-set-level.py 192.168.0.210 1 3 -1 100
+dalion_api_set_level.py 192.168.0.210 1 3 -1 100
 
 Set light intensity to 90% for the group 2 on the channel 1.
-dalion-api-set-level.py 192.168.0.210 1 2 2 900
+dalion_api_set_level.py 192.168.0.210 1 2 2 900
 
 Set light intensity to 0% for the lamp 0 on the channel 1.
-dalion-api-set-level.py 192.168.0.210 1 1 0 0
+dalion_api_set_level.py 192.168.0.210 1 1 0 0
 """
 
 

@@ -1,14 +1,14 @@
 """
-dalion-api-set-device.py
+dalion_api_set_device.py
 
 Allows modifying a lamp, group or channel.
 The parameters can be passed via command line arguments or via user input.
 
 Usage - User input
-dalion-api-set-device.py
+dalion_api_set_device.py
 
 Usage - Command line arguments
-dalion-api-set-device.py ip channel destination destination-index id value
+dalion_api_set_device.py ip channel destination destination-index id value
 
 ip: The DALION IP address.
 channel: The channel number, 1-4.
@@ -19,19 +19,19 @@ value: The value.
 
 Exemples:
 Set light intensity to 10% for the channel 1.
-dalion-api-set-device.py 192.168.0.210 1 3 -1 dval 100
+dalion_api_set_device.py 192.168.0.210 1 3 -1 dval 100
 
 Set light intensity to 90% for the group 2 on the channel 1.
-dalion-api-set-device.py 192.168.0.210 1 2 2 dval 900
+dalion_api_set_device.py 192.168.0.210 1 2 2 dval 900
 
 Set light intensity to 0% for the lamp 0 on the channel 1.
-dalion-api-set-device.py 192.168.0.210 1 1 0 dval 0
+dalion_api_set_device.py 192.168.0.210 1 1 0 dval 0
 
 Set the lamp 1 to the group 0, 1 and 2 on the channel 1.
-dalion-api-set-device.py 192.168.0.210 1 1 1 dvgr 7
+dalion_api_set_device.py 192.168.0.210 1 1 1 dvgr 7
 
 Set the fade time to 1 second on the channel 1.
-dalion-api-set-device.py 192.168.0.210 1 3 -1 dvft 2
+dalion_api_set_device.py 192.168.0.210 1 3 -1 dvft 2
 """
 
 
