@@ -203,16 +203,19 @@ def prepare_url(valip, valch, valc, valii,
     valcvalue = DEF_DEFAULT_CVALUE
     valcvalue['type'] = valctype
     if valctype == 16:
+        ## xy-coordinate
         valcvalue['value']['xx'] = valcvalue_xx
         valcvalue['value']['xy'] = valcvalue_xy
 
         valcvalue['value']['xx_isMask'] = False
         valcvalue['value']['xy_isMask'] = False
     elif valctype == 32:
+        ## colour temperature Tc
         valcvalue['value']['tc'] = valcvalue_tc
 
         valcvalue['value']['tc_isMask'] = False
     elif valctype == 64:
+        ## primary N
         valcvalue['value']['p0'] = valcvalue_p0
         valcvalue['value']['p1'] = valcvalue_p1
         valcvalue['value']['p2'] = valcvalue_p2
@@ -227,6 +230,7 @@ def prepare_url(valip, valch, valc, valii,
         valcvalue['value']['p4_isMask'] = False
         valcvalue['value']['p5_isMask'] = False
     elif valctype == 128:
+        ## RGBWAF
         valcvalue['value']['rr'] = valcvalue_rr
         valcvalue['value']['rg'] = valcvalue_rg
         valcvalue['value']['rb'] = valcvalue_rb
@@ -372,6 +376,7 @@ def main():
             valcvalue_tc = int(valcvalue_tc)
             valcvalue_tc = int(1000000 / valcvalue_tc)
         elif valctype == 64:
+            ## primary N
             valcvalue_p0 = input("primary N 0 (0-65535): ")
             valcvalue_p1 = input("primary N 1 (0-65535): ")
             valcvalue_p2 = input("primary N 2 (0-65535): ")
@@ -379,6 +384,7 @@ def main():
             valcvalue_p4 = input("primary N 4 (0-65535): ")
             valcvalue_p5 = input("primary N 5 (0-65535): ")
         elif valctype == 128:
+            ## RGBWAF
             valcvalue_rr = input("Red (0-255): ")
             valcvalue_rg = input("Green (0-255): ")
             valcvalue_rb = input("Blue (0-255): ")
@@ -412,14 +418,17 @@ def main():
             valctype = DEF_CID[valctype]['id']
 
         if valctype == 16:
+            ## xy-coordinate
             valcvalue_xx = sys.argv[7]
             valcvalue_xy = sys.argv[8]
         elif valctype == 32:
+            ## colour temperature Tc
             valcvalue_tc = sys.argv[7]
             ## Kelvin to Mirek
             valcvalue_tc = int(valcvalue_tc)
             valcvalue_tc = int(1000000 / valcvalue_tc)
         elif valctype == 64:
+            ## primary N
             valcvalue_p0 = sys.argv[7]
             valcvalue_p1 = sys.argv[8]
             valcvalue_p2 = sys.argv[9]
@@ -427,6 +436,7 @@ def main():
             valcvalue_p4 = sys.argv[11]
             valcvalue_p5 = sys.argv[12]
         elif valctype == 128:
+            ## RGBWAF
             valcvalue_rr = sys.argv[7]
             valcvalue_rg = sys.argv[8]
             valcvalue_rb = sys.argv[9]
