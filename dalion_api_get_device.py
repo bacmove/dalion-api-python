@@ -16,7 +16,7 @@ destination: 1 = lamp, 2 = group, 3 = channel.
 destination-index: Lamp index 0-63, group index 0-15 or channel -1.
 id: The variable id.
 
-Exemples:
+Examples:
 Get the light intensity of the channel 1.
 dalion_api_get_device.py 192.168.0.210 1 3 -1 dval
 

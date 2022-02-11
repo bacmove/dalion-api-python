@@ -15,7 +15,7 @@ channel: The channel number, 1-4.
 control-device-index: Control device index 0-63.
 id: The variable id.
 
-Exemples:
+Examples:
 Get the light intensity of the control device 0 on the channel 1.
 dalion_api_get_control_device.py 192.168.0.210 1 0 ls
 

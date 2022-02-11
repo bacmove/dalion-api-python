@@ -19,7 +19,7 @@ ctype: Indicates the type of colour
     (16 = xy-coordinate, 32 = colour temperature Tc, 64 = primary N, 128 = RGBWAF).
 cvalue: Indicates the value of the colour.
 
-Exemples:
+Examples:
 Set light colour temperature to 2500 Kelvin for the channel 1.
 dalion_api_set_colour.py 192.168.0.210 1 3 -1 d8ac 32 2500
 

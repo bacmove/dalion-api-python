@@ -17,7 +17,7 @@ destination-index: Lamp index 0-63, group index 0-15 or channel -1.
 id: The variable id.
 value: The value.
 
-Exemples:
+Examples:
 Set light intensity to 10% for the channel 1.
 dalion_api_set_device.py 192.168.0.210 1 3 -1 dval 100
 
